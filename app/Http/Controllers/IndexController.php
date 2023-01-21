@@ -7,11 +7,16 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index() {
-       
-        return "index";
+       // inertia dois obligatoirement etre dans /pages  puis on fais /nom_dossier/nom_fichier
+        return inertia('Index/Index' ,
+    
+         [
+            'message'=> 'hello inertia je suis kader'
+         ]
+);
     }
     public function show() {
       
-        return "show";
+        return inertia('Index/show');
     }
 }
